@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<!-- Это базовый шаблон, он будет дополнен шаблоном раздела и конкретной страницы -->
+<head>
+	<!-- Блок базовых статик ссылок и тегов -->
+	<meta charset="utf-8">
+
+	<!-- Блок meta & seo -->
+	{% block seometa}
+	{% endblock %}
+
+	<!-- Заголовок страницы -->
+	<title>{% block title %}Хокаге продакшен 404{% endblock %}</title>
+
+	<!-- Блок линков для раздела -->
+	{% block headlink %}
+	{% endblock %}
+
+</head>
+<body>
+	<!-- header -->
+	<header id="header" class="header">
+			<div class="header-inner">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3 col-sm-2 col-xs-12">
+							<div class="logo">
+								<!-- Картинка хэдера -->
+								<a href="index.html"><img src="img/nnn.png" alt="logo.png"></a>
+							</div>
+						</div>
+						<div class="col-md-9 col-sm-10 col-xs-12">
+							<div class="mobile-menu"></div>
+							<nav class="navbar navbar-default">
+								<div class="collapse navbar-collapse">
+									<ul id="nav" class="nav navbar-nav">
+										{%block navbar%}
+										<li class="current"><a href="#slider">Welcome</a></li>
+										<li><a href="#about">About Me</a></li>
+										<li><a href="#service">My Service</a></li>
+										<li><a href="#skill">Skill</a></li>
+										<li><a href="#story">Story</a></li>
+										<li><a href="#latest-works">Portfolio</a></li>
+										<li><a href="#blog">Blog</a></li>
+										<li><a href="#contact">Contact</a></li>
+										{% endblock%}
+									</ul>
+								</div> 
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--/ End Header Inner -->
+		</header>
+		<!-- End Header Area -->
+
+	<!-- основной контент страницы -->
+	{% block content%}
+	{% endblock %}
+
+	<!--footer-->
+
+</body>
+</html>

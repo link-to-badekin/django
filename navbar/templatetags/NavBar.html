@@ -1,0 +1,31 @@
+<!-- header -->
+<header id="header" class="header">
+		<div class="header-inner">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3 col-sm-2 col-xs-12">
+						<div class="logo">
+							<!-- Картинка хэдера -->
+							<a href="index.html"><img src="img/nnn.png" alt="logo.png"></a>
+						</div>
+					</div>
+					<div class="col-md-9 col-sm-10 col-xs-12">
+					<div class="mobile-menu"></div>
+					<nav class="navbar navbar-default">
+						<div class="collapse navbar-collapse">
+							<ul id="nav" class="nav navbar-nav">
+								{%if menu_items%}
+									{%for m_item in menu_items%}
+								<li><a href="{{m_item.link}}">{{m_item.name}}</a></li>
+									{%endfor %}
+								{% endif %}
+							</ul>
+						</div> 
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--/ End Header Inner -->
+</header>
+	<!-- End Header Area -->
